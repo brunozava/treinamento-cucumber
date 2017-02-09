@@ -14,6 +14,7 @@ git commit -m "Mensagem" = Comita com uma mensagem;
 git push = Envia para o repositório;
 git reset + arquivo = Tira de Staging e volta para local;
 git rm + arquivo =  Também remove o arquivo;
+git push --set-upstream origin ZV-aula-dois (quando se cria uma branch nova)
 ...
 
 Criando projeto novo com cucumber:
