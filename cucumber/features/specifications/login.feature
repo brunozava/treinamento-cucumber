@@ -2,22 +2,24 @@
 
 Funcionalidade: Validar Login
 
-Eu, como usuario netshoes
+Eu, como usuario do netshoes
 Desejo realizar um login com sucesso
-Para realixar novas compras
+Para realizar novas compras
 
-Cenario: Realizar login com sucesso
+@login_sucesso
+Cenario: Realizar Login com sucesso
 
-  Dado que eu acesse o site principal
+  Dado que eu acesse o site da netshoes
   Quando eu clicar em logar
-  E passar usuario e senha validos
+  E passar usuário e senha válidos
   E clicar em logar
-  Entao devo ser direcionado para a pagina principal
+  Entao devo ser direcionado para a página principal
 
-Cenario: Validar login invalido
+@login_invalido
+Cenario: Validar login inválido
 
-Dado que eu acesse o site principal
-Quando eu clicar em logar
-E passar usuario e senha invalidos
-E clicar em logar
-Entao devera ser mostrado uma mensagem que o login ou senha são invalidos
+  Dado que eu acesse o site da netshoes
+  Quando eu clicar em logar
+  E passar usuário e senha inválidos
+  E clicar em logar
+  Entao devera ser mostrado uma mensagem que o login ou senha são inválidos

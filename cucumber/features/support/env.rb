@@ -1,6 +1,6 @@
-require "capybara/cucumber"
-require "selenium-webdriver"
-require "rspec"
+require 'capybara/cucumber'
+require 'selenium-webdriver'
+require 'rspec'
 
 Capybara.register_driver :selenium do |app|
   Capybara::Selenium::Driver.new(app, :browser => :firefox)
