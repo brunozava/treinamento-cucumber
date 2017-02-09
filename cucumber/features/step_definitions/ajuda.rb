@@ -1,0 +1,14 @@
+Dado(/^que eu acesse o site da netshoes$/) do
+  visit "/"
+  sleep 10
+end
+
+Quando(/^eu clicar em ajuda$/) do
+  find(:css, '#help-link').click
+  sleep 30
+end
+
+Entao(/^vai mostrar a pagina de ajuda$/) do
+  sleep 100
+  puts 'aeww'
+end
