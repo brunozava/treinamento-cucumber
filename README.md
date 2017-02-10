@@ -14,6 +14,9 @@ git commit -m "Mensagem" = Comita com uma mensagem;
 git push = Envia para o repositório;
 git reset + arquivo = Tira de Staging e volta para local;
 git rm + arquivo =  Também remove o arquivo;
+git checkout -b "ZV-aula-tres" (criando branch nova)
+git pull origin master (Trazer a master pra dentro da nova branch)
+bundle install (instalar as gems)
 ...
 
 Criando projeto novo com cucumber:
