@@ -1,26 +1,35 @@
-
-Dado(/^que eu acesse a página de login da netshoes$/) do
-  visit '/account/login.jsp'
+Dado(/^que eu acesse a pagina de login da netshoes$/) do
+  #visit '/account/login.jsp'
+  visit '/account/my-addresses.jsp'
 end
 
-Quando(/^Quando eu passar campos existentes/) do
-  fill_in "email", with: "testcucumber@test.com"
-  fill_in "senha", with: "130887"
+Quando(/^eu passar campos existentes$/) do
+  @cadastro_endereco.email.set("testcucumber@test.com")
+  @cadastro_endereco.senha.set("130887")
+  #fill_in "email", with: "testcucumber@test.com"
+  #fill_in "senha", with: "130887"
 end
 
-Quando(/^clicar em entrar$/) do
+E(/^clicar em entrar$/) do
   click_button 'login-button'
 end
 
-Quando(/^eu clicar em endrecos$/) do
-  click_button 'my-addresses-link'
+#E(/^clicar em enderecos$/) do
+  #click_button 'my-addresses-link'
+  #click_link 'my-addresses-link'
+  #click_on 'my-addresses-link'
+  #click_button "my-addresses-link"
+  #find(:css, "#my-addresses-link").click
+  #click_link 'Endereços'
+  #visit '/account/my-addresses.jsp'
+#end
+
+E(/^clicar em adicionar novo endereco$/) do
+  #click_button 'addNewAddressButton'
+  find(:css, '#addNewAddressButton').click
 end
 
-Quando(/^eu clicar em adicionar novo endereco$/) do
-  click_button 'addNewAddressButton'
-end
-
-Quando(/^eu passar dados validos$/) do
+Quando(/^passar dados validos$/) do
   @cadastro_endereco.nome_endereco.set(@nome_endereco)
   @cadastro_endereco.sobrenome.set(@nome_destinatario)
   @cadastro_endereco.cep_inicio.set(@cep_inicio)
@@ -30,8 +39,9 @@ Quando(/^eu passar dados validos$/) do
   @cadastro_endereco.referencia.set(@referencia)
 end
 
-Quando(/^eu clicar em salvar endereco$/) do
-  click_button 'shippingSaveAddressButton'
+Quando(/^clicar em salvar endereco$/) do
+  #click_button 'shippingSaveAddressButton'
+  find(:css, '#shippingSaveAddressButton').click
 end
 
 Entao(/^novo endereco devera ser adicionado com sucessos$/) do
