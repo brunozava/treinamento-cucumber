@@ -17,7 +17,9 @@ git rm + arquivo =  Também remove o arquivo;
 git checkout -b "ZV-aula-tres" (criando branch nova)
 git pull origin master (Trazer a master pra dentro da nova branch)
 bundle install (instalar as gems)
-cucumber --tags @cenario
+cucumber --tags @cenario (executa apenas o cenário indicado)
+git branch -m <nome antigo do branch> <nome novo do branch> = Renomeia branch atual
+gem install capybara-webkit --source http://rubygems.org - instalando uma gem
 ...
 
 Criando projeto novo com cucumber:
